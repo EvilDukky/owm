@@ -1,11 +1,22 @@
 import psycopg2
+import json #библиотеки
+
+with open('config.json', 'r', encoding='utf-8') as f:  # открываем конфигурационный файл json
+    text = json.load(f)  # загнали все из файла в переменную
+
+    for txt in text['postgres']: # создали цикл, который будет работать построчно
+        host = (txt['host'])
+        user = (txt['user'])
+        password = (txt['password'])
+        database = (txt['database'])
+        port = (txt['port'])
 
 connection = psycopg2.connect(
-    host="127.0.0.1",
-    user="postgres",
-    password="11111",
-    database="OpenWeatherMap",
-    port="5433"
+    host=host,
+    user=(user),
+    password=(password),
+    database=(database),
+    port=(port)
 )
 print("Database opened successfully")
 
