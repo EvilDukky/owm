@@ -3,7 +3,7 @@ import json #библиотеки
 
 with open('config.json', 'r', encoding='utf-8') as f:  # открываем конфигурационный файл json
     text = json.load(f)  # загнали все из файла в переменную
-
+#
     for txt in text['postgres']: # создали цикл, который будет работать построчно
         host = (txt['host'])
         user = (txt['user'])
