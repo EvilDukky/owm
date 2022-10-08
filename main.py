@@ -66,7 +66,7 @@ while(1):
 
     cur = connection.cursor()
     cur.execute(
-        '''INSERT INTO OWM
+        '''INSERT INTO OWM_TEST
         (coord_lat,coord_lon,unix_time,temp,temp_feels,
         pressure,pressure_sea,pressure_grnd,humidity,
         visibility,wind_seed,wind_gust,wind_deg,snow_1h,rain_1h,
