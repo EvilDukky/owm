@@ -21,7 +21,7 @@ connection = psycopg2.connect(
 print("Database opened successfully")
 
 cur = connection.cursor()
-cur.execute('''CREATE TABLE OWM_test  
+cur.execute('''CREATE TABLE owm_python_parser  
      (id serial PRIMARY KEY,
      coord_lat real,
      coord_lon real,
