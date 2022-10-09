@@ -1,12 +1,13 @@
-from datetime import datetime
-
 import requests
+import json #библиотеки
 
-#s_city = "Kirovsk,RU"
-city_id = 548391
-lat=67.750000
-lon=33.750000
-appid = "18fc6b6d6ca9168fb728395a46a70166"
+with open('config.json', 'r', encoding='utf-8') as f:  # открываем конфигурационный файл json
+    text = json.load(f)  # загнали все из файла в переменную
+
+for txt in text['owm']:  # создали цикл, который будет работать построчно
+    lat = (txt['lat'])  # вытаскиваем переменные из файла
+    lon = (txt['lon'])
+    appid = (txt['appid'])
 
 print('\n Прогноз погоды сейчас\n')
 try:
