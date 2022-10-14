@@ -36,6 +36,7 @@ cur.execute('''CREATE TABLE owm_python_parser
      wind_speed real,
      wind_gust real,
      wind_deg INT,
+     wind_direction TEXT,
      snow_1h real,
      rain_1h real,
      clouds INT,
