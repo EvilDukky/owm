@@ -8,11 +8,11 @@
   ],
   "postgres": [
     {
-      "host": "172.16.117.193",
+      "host": "localhost",
       "user": "postgres",
-      "password": "avalanche460",
+      "password": "11111",
       "database": "weather",
-      "port": 5632
+      "port": 5433
     }
   ]
 }
